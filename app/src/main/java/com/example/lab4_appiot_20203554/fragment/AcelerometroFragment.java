@@ -68,7 +68,7 @@ public class AcelerometroFragment extends Fragment implements SensorEventListene
                         recyclerView.smoothScrollToPosition(lastItemPosition);
                     }
                 }
-                Toast.makeText(requireContext(), "Aceleración de: " + aceleracion + " m/s^2", Toast.LENGTH_SHORT).show();
+                Toast.makeText(requireContext(), "Aceleración: " + aceleracion + " m/s^2", Toast.LENGTH_SHORT).show();
 
             }
         }

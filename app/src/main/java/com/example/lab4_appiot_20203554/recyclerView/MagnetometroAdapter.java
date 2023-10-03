@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.lab4_appiot_20203554.R;
 import com.example.lab4_appiot_20203554.entity.Result;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.squareup.picasso.Picasso;
 
 import org.w3c.dom.Text;
@@ -49,7 +50,7 @@ public class MagnetometroAdapter extends RecyclerView.Adapter<MagnetometroAdapte
         country.setText("País: "+r.getLocation().getCountry());
         phone.setText("Phone: "+r.getPhone());
         email.setText("Correo: "+r.getEmail());
-        Picasso.with(context).load(r.getPicture().getLarge()).into(pic);
+        Picasso.get().load(r.getPicture().getLarge()).into(pic);
 
 
     }
@@ -63,7 +64,7 @@ public class MagnetometroAdapter extends RecyclerView.Adapter<MagnetometroAdapte
         Result result;
         public MagnetometroViewHolder(@NonNull View itemView){
             super(itemView);
-            Button button = itemView.findViewById(R.id.closeButton);
+            FloatingActionButton button = itemView.findViewById(R.id.closeButton);
             button.setOnClickListener(view -> {
                 int position = getAdapterPosition();
                 if (position != RecyclerView.NO_POSITION) {

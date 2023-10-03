@@ -12,24 +12,20 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.util.Log;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.lab4_appiot_20203554.databinding.ActivityPrincipalBinding;
 import com.example.lab4_appiot_20203554.entity.Result;
 import com.example.lab4_appiot_20203554.entity.ResultDto;
 import com.example.lab4_appiot_20203554.fragment.AcelerometroFragmentDirections;
-import com.example.lab4_appiot_20203554.fragment.MagnetometroFragment;
 import com.example.lab4_appiot_20203554.fragment.MagnetometroFragmentDirections;
 import com.example.lab4_appiot_20203554.service.CredentialsService;
 import com.example.lab4_appiot_20203554.viewModel.ResultViewModel;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -137,7 +133,6 @@ public class PrincipalActivity extends AppCompatActivity {
 
                     if (inMagnet){
                         resultViewModel.getResultMagnet().setValue(result);
-
                     }else {
                         resultViewModel.getResultAcel().setValue(result);
                     }

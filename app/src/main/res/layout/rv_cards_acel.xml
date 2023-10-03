@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <com.google.android.material.card.MaterialCardView
         android:layout_width="320dp"
         android:layout_height="wrap_content"
-        app:cardElevation="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:cardElevation="5dp">
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/closeButton2"
@@ -18,10 +15,10 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:src="@android:drawable/ic_menu_close_clear_cancel"
-            app:tint="#FFFFFF"
-            app:fabCustomSize="25dp"
             app:backgroundTint="#FF3232"
-            app:fabSize="normal" />
+            app:fabCustomSize="25dp"
+            app:fabSize="normal"
+            app:tint="#FFFFFF" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -42,15 +39,15 @@
                 android:padding="16dp">
 
                 <TextView
-                    android:id="@+id/textName"
+                    android:id="@+id/textName2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Nombre"
-                    android:textStyle="bold"
-                    android:textAppearance="?attr/textAppearanceBody1" />
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textGender"
+                    android:id="@+id/textGender2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -58,25 +55,28 @@
                     android:textAppearance="?attr/textAppearanceBody2" />
 
                 <TextView
-                    android:id="@+id/textCity"
+                    android:id="@+id/textCity2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Ciudad"
                     android:textAppearance="?attr/textAppearanceBody2" />
+
                 <TextView
-                    android:id="@+id/textCountry"
+                    android:id="@+id/textCountry2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="País"
                     android:textAppearance="?attr/textAppearanceBody2" />
+
                 <TextView
-                    android:id="@+id/textEmail"
+                    android:id="@+id/textEmail2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Email"
                     android:textAppearance="?attr/textAppearanceBody2" />
+
                 <TextView
-                    android:id="@+id/textPhone"
+                    android:id="@+id/textPhone2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Phone"
@@ -87,4 +87,4 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

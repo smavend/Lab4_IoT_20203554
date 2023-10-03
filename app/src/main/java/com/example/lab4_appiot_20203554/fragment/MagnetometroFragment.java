@@ -42,11 +42,7 @@ public class MagnetometroFragment extends Fragment implements SensorEventListene
 
         ResultViewModel resultViewModel = new ViewModelProvider(requireActivity()).get(ResultViewModel.class);
         resultViewModel.getResultMagnet().observe(getViewLifecycleOwner(),result -> {
-            Log.d("msg-test","contacto livedata recibido: "+result.getName().getFullName());
             listResults.add(result);
-            for (Result r : listResults){
-                Log.d("msg-test","lista magneto: "+r.getName().getFullName());
-            }
             adapter.setLista(listResults);
             adapter.notifyDataSetChanged();
         });
